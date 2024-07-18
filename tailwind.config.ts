@@ -12,6 +12,12 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "purple-gradient": "linear-gradient(91.35deg, #D37AE9 0.94%, #7E36FC 99.06%);"
+      },
+      fontFamily: {
+        geist: ['var(--font-geist-sans)'],
+        geistMono: ['var(--font-geist-mono)'],
+        'satoshi': "'Satoshi', sans-serif",
       },
     },
   },
