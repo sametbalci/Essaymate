@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
