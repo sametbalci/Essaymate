@@ -11,7 +11,7 @@ export {default as PDFIcon} from './PDFIcon';
 export {default as DOCIcon} from './DOCIcon';
 export {default as Synonyms} from './Synonyms';
 export {default as TextType} from './TextType';
-export {default as TextEditor} from './EditorText';
+export {default as Add} from './Add';
 export {default as CircleStick} from './CircleStick';
 export {default as FiveStar} from './FiveStar';
 export {default as Test1} from './Test1';
