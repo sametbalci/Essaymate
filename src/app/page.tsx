@@ -58,6 +58,7 @@ export default function Home() {
 
     useEffect(() => {
         const scrollContainer = scrollContainerRef.current;
+
         if (scrollContainer) {
             scrollContainer.addEventListener("scroll", handleScroll);
             handleScroll(); // Initial check
@@ -68,27 +69,21 @@ export default function Home() {
     }, []);
 
     return <main
-        className="flex flex-col min-h-screen items-center justify-center max-[450px]:w-[200px] bg-[url('../../public/Dot.svg')] overflow-hidden">
+        className="flex flex-col min-h-screen items-center justify-center bg-[url('../../public/Dot.svg')] overflow-hidden">
         <div
-            className="flex flex-col gap-[21px] justify-center items-center max-w-[1440px] min-h-screen p-24 mb-10">
+            className="flex flex-col gap-[21px] justify-center items-center max-[450px]:w-full max-[450px]:max-w-[450px] max-w-[1440px] min-h-screen p-24 mb-10">
             <div
-                className="flex flex-row items-center justify-between w-full h-[960px] bg-[url('../../public/Gradient_Blur.svg')] bg-repeat-round">
-                <div className="flex flex-col w-[628px] h-[598px] gap-2.5">
-                    <p className="font-geist font-semibold text-[#0A84FF] text-[16px]">
+                className="flex flex-row items-center max-[450px]:justify-center justify-between w-full h-[960px] max-[450px]:w-[390px] bg-[url('../../public/Gradient_Blur.svg')] bg-repeat-round">
+                <div className="flex flex-col w-[628px] h-[598px] max-[450px]:w-[360px] max-[450px]:items-center max-[450px]:justify-center gap-2.5">
+                    <p className="font-geist font-semibold text-[#0A84FF] text-[16px] max-[450px]:items-center max-[450px]:justify-center">
                         EssayMate
                     </p>
-                    <div className="flex flex-col w-[628px]">
-                        <p className="font-geist font-semibold text-[60px] text-black">
-                            AI Essay Writer
-                        </p>
-                        <p className="font-geist font-semibold text-[60px] bg-purple-gradient w-[668px] text-transparent bg-clip-text">
-                            Write 5x Faster Essays
-                        </p>
-                        <p className="font-geist font-semibold text-[60px] text-black">
-                            Without Plagiarism
+                    <div className="flex flex-col w-[628px] max-[450px]:w-[360px] ">
+                        <p className="font-geist font-semibold text-[56px] text-black max-[450px]:w-[360px] max-[450px]:text-center max-[450px]:text-[46px]">
+                            AI Essay Writer: <br className={"max-[450px]:hidden"}/><span className={"bg-purple-gradient text-transparent bg-clip-text"}>Write 5x Faster Essays</span><br className={"max-[450px]:hidden"}/> Without Plagiarism
                         </p>
                     </div>
-                    <p className="w-[624px] font-geist font-normal text-lg text-[#00030FCC]">
+                    <p className="w-[624px] max-[450px]:w-[360px] max-[450px]:text-center font-geist font-normal text-lg text-[#00030FCC]">
                         The AI Essay Writer is an essay writing assistant designed to
                         conduct research on essay topic, generate essays with varied tones
                         and styles and edit the generated essays using a text editor. It
@@ -96,16 +91,16 @@ export default function Home() {
                         documents. This tool is ideal for college students and anyone who
                         wants an AI bot to create essays.
                     </p>
-                    <div className="absolute mt-[200px] ml-[575px] z-10">
+                    <div className="absolute mt-[200px] ml-[575px] z-10 max-[450px]:hidden">
                         <Icons.SpiralArrow/>
                     </div>
-                    <div className="flex flex-row w-[365px] gap-2.5 mt-10">
+                    <div className="flex flex-row max-[450px]:flex-col max-[450px]:items-center max-[450px]:justify-center w-[365px] gap-2.5 mt-10">
                         <Icons.Star/>
                         <p className="font-geist text-[#00030F] font-semibold text-lg">
                             4.6 Stars (78.9k Ratings)
                         </p>
                     </div>
-                    <div className="flex flex-row gap-8 mt-5">
+                    <div className="flex flex-row gap-8 mt-5 max-[450px]:hidden">
                         <div
                             className="flex flex-row items-center justify-center gap-2.5 w-[189px] h-[60px] rounded-2xl bg-black border-solid border-4 border-black/[.1] cursor-pointer"
                             onClick={() => router.push('https://apps.apple.com/tr/app/essaymate-ai-essay-writer-hw/id6446486799?l=tr')}>
@@ -132,7 +127,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row">
+                <div className="flex flex-row max-[450px]:hidden">
                     <div
                         className="flex items-center justify-center w-[243px] h-[510px] bg-white rounded-[36px] -rotate-[4deg]  mt-[100px] translate-x-[40px] border border-[#6386FF4D] drop-shadow-[0_7px_136px_rgba(0,0,0,0.1)]">
                         <Image
@@ -155,24 +150,24 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="absolute mr-[1068px] -mt-[3754px] -z-10">
+            <div className="absolute mr-[1068px] -mt-[3754px] -z-10 max-[450px]:hidden">
                 <Icons.Union/>
             </div>
-            <div className="absolute mr-[1068px] -mt-[1028px] -z-10">
+            <div className="absolute mr-[1068px] -mt-[1028px] -z-10 max-[450px]:hidden">
                 <Icons.Union/>
             </div>
-            <div className="absolute translate-x-[540px] -mt-[2390px] -z-10">
+            <div className="absolute translate-x-[540px] -mt-[2390px] -z-10 max-[450px]:hidden">
                 <Icons.Union/>
             </div>
-            <div className="absolute -ml-[423px] mt-[790px] z-0">
+            <div className="absolute -ml-[423px] mt-[790px] z-0 max-[450px]:hidden">
                 <Icons.Union/>
             </div>
-            <div className="absolute ml-[500px] mt-[1470px] z-0">
+            <div className="absolute ml-[500px] mt-[1470px] z-0 max-[450px]:hidden">
                 <Icons.Union/>
             </div>
             <div
-                className="flex flex-row items-center justify-center w-[1320px] h-[650px] bg-white rounded-3xl border border-[#6386FF33] drop-shadow-[0_10px_30px_0_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
-                <div className="flex mr-auto w-[793px] h-[610px] ml-5">
+                className="flex flex-row items-center justify-center w-[1320px] h-[650px] max-[450px]:w-[358px] max-[450px]:h-[482px] bg-white rounded-3xl border border-[#6386FF33] drop-shadow-[0_10px_30px_0_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                <div className="flex mr-auto w-[793px] h-[610px] ml-5 max-[450px]:hidden">
                     <div className="flex absolute">
                         <Icons.Topic/>
                     </div>
@@ -236,13 +231,13 @@ export default function Home() {
                     </div>
                 </div>
                 <div
-                    className="flex flex-col w-[462px] items-center justify-center mr-auto -translate-x-[174px] gap-2.5">
-                    <div className="w-[462px]">
-                        <p className="w-[353px] font-semibold text-[40px] text-black font-geist text-start">
+                    className="flex flex-col w-[462px] items-center justify-center xl:mr-auto xl:-translate-x-[174px] gap-2.5">
+                    <div className="w-[462px] max-[450px]:w-[265px]">
+                        <p className="w-[353px] max-[450px]:w-[265px] max-[450px]:text-center font-semibold text-[40px] max-[450px]:text-[30px] text-black font-geist text-start">
                             Essay Research for Any Topic
                         </p>
                     </div>
-                    <p className="w-[462px] font-geist font-normal text-lg text-black/[.8]">
+                    <p className="w-[462px] max-[450px]:w-[321px] max-[450px]:text-center font-geist font-normal text-lg text-black/[.8]">
                         The AI Essay Writer conducts research on any given topic using
                         specified keywords, leveraging a database and natural language
                         processing (NLP). The app can also summarize PDFs or URLs to
@@ -251,14 +246,14 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className="flex flex-row mt-[9px] gap-[30px] items-center justify-center w-[1320px]">
+            <div className="flex flex-row max-[450px]:flex-col mt-[9px] gap-[30px] items-center justify-center w-[1320px] max-[450px]:w-[358px]">
                 <div
-                    className="flex flex-col items-center justify-center w-[645px] h-[650px] rounded-3xl bg-white border border-[#6386FF33] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
-                    <div className="flex absolute items-center justify-center">
+                    className="flex flex-col items-center justify-center w-[645px] h-[650px] max-[450px]:w-[358px] max-[450px]:h-[386px] rounded-3xl bg-white border border-[#6386FF33] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                    <div className="flex absolute items-center justify-center max-[450px]:hidden">
                         <Icons.SmallDot/>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                        <div className="flex flex-row items-center justify-center z-10 gap-[5px] ml-[16px]">
+                        <div className="flex flex-row items-center justify-center z-10 gap-[5px] ml-[16px] max-[450px]:hidden">
                             <div className="mt-[46px]">
                                 <Icons.ThinArrow/>
                             </div>
@@ -279,7 +274,7 @@ export default function Home() {
                             <div className="w-[63px] h-[60px] bg-[#EFF3FF] rounded-l-[50px]"></div>
                         </div>
                         <div
-                            className="flex flex-row items-center justify-center z-10 gap-[5px] mr-[16px] rotate-180 -mt-[14px]">
+                            className="flex flex-row items-center justify-center z-10 gap-[5px] mr-[16px] rotate-180 -mt-[14px] max-[450px]:hidden">
                             <div className="mt-[46px]">
                                 <Icons.ThinArrow/>
                             </div>
@@ -299,11 +294,11 @@ export default function Home() {
                             <div className="w-[10px] h-[1px] bg-[#6386FF33]"></div>
                             <div className="w-[63px] h-[60px] bg-[#EFF3FF] rounded-l-[50px]"></div>
                         </div>
-                        <div className="flex flex-col gap-2.5 w-[451px] font-geist z-10 mt-[92px] mr-16">
-                            <p className="w-[272px] font-semibold text-[40px] text-black">
+                        <div className="flex flex-col gap-2.5 w-[451px] max-[450px]:w-[314px] font-geist z-10 xl:mt-[92px] xl:mr-16 max-[450px]:items-center max-[450px]:justify-center">
+                            <p className="w-[272px] font-semibold text-[40px] text-black max-[450px]:w-[230px] max-[450px]:text-[30px] max-[450px]:text-center">
                                 Ai Original Essay Creator
                             </p>
-                            <p className="font-normal text-lg text-black/[.8]">
+                            <p className="font-normal text-lg text-black/[.8] max-[450px]:text-center">
                                 The AI essay generator enables users to get topic suggestions,
                                 create an essay plan with an outline, and select templates,
                                 tones, styles, formats, and target audiences to fully convey
@@ -313,19 +308,19 @@ export default function Home() {
                     </div>
                 </div>
                 <div
-                    className="flex flex-col items-center justify-center w-[645px] h-[650px] rounded-3xl bg-white border border-[#6386FF33] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
-                    <div className="flex absolute items-center justify-center">
+                    className="flex flex-col items-center justify-center w-[645px] h-[650px] max-[450px]:w-[358px] max-[450px]:h-[408px] rounded-3xl bg-white border border-[#6386FF33] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                    <div className="flex absolute items-center justify-center max-[450px]:hidden">
                         <Icons.SmallDot/>
                     </div>
                     <div
-                        className="flex items-center justify-center w-[295px] h-[100px] rounded-[20px] border border-[#6386FF33] translate-y-[42px]">
+                        className="flex items-center justify-center w-[295px] h-[100px] rounded-[20px] border border-[#6386FF33] translate-y-[42px] max-[450px]:hidden">
                         <div
                             className="flex items-center justify-center w-[255px] h-[160px] bg-white border border-[#6386FF33] rounded-[20px] z-10 drop-shadow-[0_10px_60px_rgba(0,0,0,0.08)]">
                             <Icons.BlueSticks/>
                         </div>
                     </div>
                     <div
-                        className="flex flex-row items-center justify-center absolute -translate-x-[5px] z-10 -mt-[180px]">
+                        className="flex flex-row items-center justify-center absolute -translate-x-[5px] z-10 -mt-[180px] max-[450px]:hidden">
                         <div
                             className="flex items-center justify-center w-[62px] h-[72px] rounded-[14px] bg-white border border-[#6386FF33] z-10 translate-x-[5px] -rotate-[10deg]">
                             <Icons.PDFIcon/>
@@ -335,11 +330,11 @@ export default function Home() {
                             <Icons.DOCIcon/>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-2.5 w-[451px] font-geist z-10 mt-[168px] mr-16">
-                        <p className="w-[304px] font-semibold text-[40px] text-black">
+                    <div className="flex flex-col gap-2.5 w-[451px] max-[450px]:w-[312px] max-[450px]:items-center max-[450px]:justify-center font-geist z-10 xl:mt-[168px] xl:mr-16">
+                        <p className="w-[304px] max-[450px]:w-[228px] font-semibold text-[40px] max-[450px]:text-[30px] max-[450px]:text-center text-black">
                             Ai Essay Export (PDF or Word)
                         </p>
-                        <p className="font-normal text-lg text-black/[.8]">
+                        <p className="font-normal text-lg text-black/[.8] max-[450px]:text-center">
                             The AI essay generator enables users to get topic suggestions,
                             create an essay plan with an outline, and select templates,
                             tones, styles, formats, and target audiences to fully convey
@@ -349,12 +344,12 @@ export default function Home() {
                 </div>
             </div>
             <div
-                className="flex flex-row justify-center items-center mt-[9px] w-[1320px] h-[650px] rounded-3xl bg-white border border-[#6386FF33] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)] z-10">
-                <div className="w-[476px] gap-2.5 translate-x-[150px]">
-                    <p className="font-geist font-semibold text-[40px] text-black">
+                className="flex flex-row justify-center items-center mt-[9px] w-[1320px] h-[650px] max-[450px]:w-[358px] max-[450px]:h-[408px] rounded-3xl bg-white border border-[#6386FF33] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)] z-10">
+                <div className="w-[476px] max-[450px]:w-[312px] gap-2.5 xl:translate-x-[150px]">
+                    <p className="font-geist font-semibold text-[40px] max-[450px]:text-[30px] max-[450px]:text-center text-black">
                         Ai Essay Editor
                     </p>
-                    <p className="font-geist font-normal text-lg text-black/[.8]">
+                    <p className="font-geist font-normal text-lg text-black/[.8] max-[450px]:text-center">
                         Not satisfied with your essay? No worries. Users can edit
                         generated essays by proofreading, injecting key points or
                         arguments, and selecting fonts. The editor also displays the
@@ -362,7 +357,7 @@ export default function Home() {
                         enhance your essay.
                     </p>
                 </div>
-                <div className="flex flex-col ml-auto w-[793px] h-[610px] mr-5">
+                <div className="flex flex-col ml-auto w-[793px] h-[610px] mr-5 max-[450px]:hidden">
                     <div className="flex absolute rotate-180">
                         <Icons.Topic/>
                     </div>
@@ -405,31 +400,31 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center mt-[129px] w-[1320px] gap-[30px]">
+            <div className="flex flex-col justify-center items-center mt-[129px] max-[450px]:mt-[79px] max-[450px]:w-[360px] w-[1320px] gap-[30px]">
                 <div className="flex flex-col items-center justify-center gap-2.5">
                     <p className="font-geist font-semibold text-[#8038FD] text-base">
                         Testimonial
                     </p>
-                    <p className="font-geist font-semibold text-black text-[40px]">
+                    <p className="font-geist font-semibold text-black text-[40px] max-[450px]:w-[301px] max-[450px]:text-center">
                         What people are saying?
                     </p>
                 </div>
-                <div className="flex flex-row gap-[30px] w-[1320px] items-center justify-center">
+                <div className="flex flex-row gap-[30px] max-[450px]:-mt-[100px] max-[450px]:gap-4 w-[1320px] max-[450px]:w-[390px] max-[450px]:p-24 max-[450px]:pr-20 max-[450px]:overflow-x-scroll items-center justify-center">
                     <div
-                        className="flex w-[420px] h-[294px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                        className="flex w-[420px] h-[294px] max-[450px]:w-[318px] max-[450px]:h-[318px] max-[450px]:ml-[640px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
                         <div className="rounded-[24px] p-12 bg-white">
-                            <div className="absolute -translate-y-[90px] -rotate-[30deg]">
+                            <div className="absolute -translate-y-[90px] -rotate-[30deg] max-[450px]:hidden">
                                 <Icons.Test1/>
                             </div>
                             <div
-                                className="mt-[60px] flex flex-col h-[66px] w-[322px] gap-2.5 items-center justify-center">
+                                className="mt-[40px] flex flex-col h-[66px] w-[322px] max-[450px]:w-[220px] max-[450px]:h-[180px] gap-2.5 items-center justify-center">
                                 <div className="flex items-center justify-center">
                                     <Icons.FiveStar/>
                                 </div>
-                                <p className="font-geist font-semibold text-base text-black">
+                                <p className="font-geist font-semibold text-base text-black max-[450px]:w-[224px] max-[450px]:text-center">
                                     Lightning-Fast Essay Writing Made Easy!
                                 </p>
-                                <p className="font-geist font-normal text-sm text-black/[.8] text-center w-[362px]">
+                                <p className="font-geist font-normal text-sm text-black/[.8] text-center w-[362px] max-[450px]:w-[282px] max-[450px]:text-left">
                                     As a college student handing multiple essay homework, I've
                                     tried some essay writing app, but EssayMate: AI Essay Writer
                                     app stands out for its 4x fast. The moment I input my
@@ -440,44 +435,44 @@ export default function Home() {
                         </div>
                     </div>
                     <div
-                        className="flex w-[420px] h-[294px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                        className="flex w-[420px] h-[294px] max-[450px]:w-[318px] max-[450px]:h-[318px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
                         <div className="rounded-[24px] p-12 bg-white">
                             <div
-                                className="mt-[40px] flex flex-col h-[66px] w-[322px] gap-2.5 items-center justify-center">
+                                className="mt-[40px] flex flex-col h-[66px] w-[322px] max-[450px]:w-[220px] max-[450px]:h-[180px] gap-2.5 items-center justify-center">
                                 <div className="flex items-center justify-center">
                                     <Icons.FiveStar/>
                                 </div>
-                                <p className="font-geist font-semibold text-base text-black">
+                                <p className="font-geist font-semibold text-base text-black max-[450px]:w-[224px] max-[450px]:text-center">
                                     Orginial Essay Creator
                                 </p>
-                                <p className="font-geist font-normal text-sm text-black/[.8] text-center w-[362px]">
+                                <p className="font-geist font-normal text-sm text-black/[.8] text-center w-[362px] max-[450px]:w-[282px] max-[450px]:text-left">
                                     As a university student, I have struggled with my academic
                                     copy essay writing. That's where the Essaymate:AI Essay
                                     Writer app has show me some tactic to complete my essay
                                     without plagmarism.
                                 </p>
                             </div>
-                            <div className="absolute translate-y-[54px] -rotate-[15deg]">
+                            <div className="absolute translate-y-[54px] -rotate-[15deg] max-[450px]:hidden">
                                 <Icons.Test2/>
                             </div>
                         </div>
                     </div>
                     <div
-                        className="flex w-[420px] h-[294px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                        className="flex w-[420px] h-[294px] max-[450px]:w-[318px] max-[450px]:h-[318px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
                         <div className="rounded-[24px] p-12 bg-white">
                             <div
-                                className="flex absolute -translate-y-[75px] translate-x-[240px] rotate-[15deg] ml-auto">
+                                className="flex absolute -translate-y-[75px] translate-x-[240px] rotate-[15deg] ml-auto max-[450px]:hidden">
                                 <Icons.Test3/>
                             </div>
                             <div
-                                className="mt-[40px] flex flex-col h-[66px] w-[322px] gap-2.5 items-center justify-center">
+                                className="mt-[40px] flex flex-col h-[66px] w-[322px] max-[450px]:w-[220px] max-[450px]:h-[180px] gap-2.5 items-center justify-center">
                                 <div className="flex items-center justify-center">
                                     <Icons.FiveStar/>
                                 </div>
-                                <p className="font-geist font-semibold text-base text-black">
+                                <p className="font-geist font-semibold text-base text-black max-[450px]:w-[224px] max-[450px]:text-center">
                                     Editior Feature of Essay
                                 </p>
-                                <p className="font-geist font-normal text-sm text-black/[.8] text-center w-[362px]">
+                                <p className="font-geist font-normal text-sm text-black/[.8] text-center w-[362px] max-[450px]:w-[282px] max-[450px]:text-left">
                                     Most of app does not have editor features in app however
                                     EssayMate has it. I recently tried the EssayMate app essay
                                     creator, specifically its "Essay Editing" feature, and this
@@ -487,19 +482,19 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row gap-[30px] max-w-[1320px] items-center justify-between mt-[179px]">
-                    <div className="flex flex-col gap-5">
-                        <div className="flex flex-col w-[357px] gap-2.5">
-                            <p className="flex font-geist font-semibold text-[40px] text-black">
+                <div className="flex flex-row max-[450px]:flex-col gap-[30px] max-w-[1320px] items-center justify-between mt-[179px] max-[450px]:mt-[79px]">
+                    <div className="flex flex-col gap-5 max-[450px]:items-center max-[450px]:justify-center">
+                        <div className="flex flex-col w-[357px] gap-2.5 max-[450px]:items-center max-[450px]:justify-center">
+                            <p className="flex font-geist font-semibold text-[40px] text-black max-[450px]:text-center">
                                 How it Work
                             </p>
-                            <p className="flex font-geist font-normal text-lg text-black/[.8]">
+                            <p className="flex font-geist font-normal text-lg text-black/[.8] max-[450px]:text-center">
                                 Follow link to download the app or find the app on app store
                                 with “Essaymate” brand. Follow path to create essay as you
                                 want.
                             </p>
                         </div>
-                        <div className="flex flex-row gap-5">
+                        <div className="flex flex-row gap-5 max-[450px]:hidden">
                             <div
                                 className={`flex items-center justify-center w-[100px] h-[50px] border border-[#6386FF33] rounded-[50px] bg-white cursor-pointer transition duration-300 ${
                                     isAtStart
@@ -526,7 +521,7 @@ export default function Home() {
                     </div>
                     <div
                         ref={scrollContainerRef}
-                        className="flex flex-row max-w-[1000px] h-[400px] p-11 overflow-hidden scrollbar-hide space-x-5 translate-x-[50px] translate-y-5"
+                        className="flex flex-row xl:max-w-[1000px] h-[400px] p-11 xl:overflow-hidden xl:scrollbar-hide space-x-5 translate-x-[50px] translate-y-5 max-[450px]:overflow-x-scroll max-[450px]:translate-x-0 max-[450px]:w-[390px] max-[450px]:items-center"
                     >
                         <div
                             className="flex w-[270px] h-[290px] rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
@@ -623,40 +618,40 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row items-center justify-center gap-[30px] max-w-[433px] mt-[129px]">
+                <div className="flex flex-row items-center justify-center gap-[30px] max-w-[433px] mt-[129px] max-[450px]:hidden">
                     <div className="w-[160px] h-[1px] bg-[#96B8F8]"></div>
                     <div className="spin-animation">
                         <Icons.React/>
                     </div>
                     <div className="w-[160px] h-[1px] bg-[#96B8F8]"></div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-[30px] max-w-[840px] mt-[129px]">
+                <div className="flex flex-col items-center justify-center gap-[30px] max-w-[840px] mt-[129px] max-[450px]:mt-[79px]">
                     <div className="flex flex-col gap-2.5 items-center justify-center w-[617px]">
                         <p className="font-geist font-semibold text-base text-[#1D9EBB]">
                             F.A.Q
                         </p>
-                        <p className="font-geist font-semibold text-[40px] text-black">
+                        <p className="font-geist font-semibold text-[40px] text-black max-[450px]:w-[340px] max-[450px]:text-center">
                             Frequently Asked Questions
                         </p>
-                        <p className="font-geist font-normal text-lg text-black/80 text-center">
+                        <p className="font-geist font-normal text-lg text-black/80 text-center max-[450px]:w-[330px] max-[450px]:text-center">
                             There's no limit to what you can do with Essay Mate. You can
                             find answers to all the questions you have in mind.
                         </p>
                     </div>
-                    <div className="absolute flex mt-[670px] ml-[577px]">
+                    <div className="absolute flex mt-[670px] ml-[577px] max-[450px]:hidden">
                         <Icons.Spiral/>
                     </div>
                     <div
-                        className="flex w-[840px] min-h-[1005px] h-auto rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
-                        <div className="rounded-[24px] w-[838px] bg-white flex items-center justify-center p-[50px]">
+                        className="flex w-[840px] min-h-[1005px] max-[450px]:w-[358px] max-[450px]:min-h-[620px] h-auto rounded-3xl p-px bg-gradient-to-b from-[#6386FF33] to-[#6386FF00] drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)] shadow-[0_7px_3px_0_rgba(0,0,0,0.06)]">
+                        <div className="rounded-[24px] w-[838px] max-[450px]:w-[356px] bg-white flex items-center justify-center p-[50px]">
                             <div className="flex flex-col gap-5 items-center justify-center">
                                 {questions.map((item, index) => (
                                     <div
                                         key={index}
-                                        className={`flex flex-col justify-between w-[760px] bg-[#F1F8FB] rounded-[10px] p-5 transition-all duration-500 ${expandedIndex === index ? 'h-auto' : 'h-[65px]'}`}
+                                        className={`flex flex-col justify-between w-[760px] max-[450px]:w-[338px] bg-[#F1F8FB] rounded-[10px] p-5 transition-all duration-500 ${expandedIndex === index ? 'h-auto max-[450px]:h-auto' : 'h-[65px] max-[450px]:h-auto'}`}
                                     >
                                         <div className="flex flex-row items-center justify-between">
-                                            <p className="font-geist font-medium text-black text-2xl">{item.question}</p>
+                                            <p className="font-geist font-medium text-black text-2xl max-[450px]:text-xl max-[450px]:w-[218px]">{item.question}</p>
                                             <button
                                                 onClick={() => handleExpand(index)}
                                                 className={`transform transition-transform duration-500 ${expandedIndex === index ? 'rotate-45' : 'rotate-0'}`}
@@ -679,8 +674,8 @@ export default function Home() {
         </div>
         <div className="flex bottom-0 w-full h-[134px] items-center justify-center bg-black z-10">
             <div className="flex items-center justify-center w-[1440px] h-[134px] bg-black">
-                <div className="w-[1240px] flex flex-row justify-between items-center">
-                    <div className="flex flex-row gap-[50px]">
+                <div className="w-[1240px] flex flex-row justify-between max-[450px]:justify-center items-center">
+                    <div className="flex flex-row gap-[50px] max-[450px]:hidden">
                         <p className="font-geist font-medium text-base text-white/70">
                             ABOUT US
                         </p>
