@@ -5,7 +5,7 @@ import mask1 from "../../public/Mask.svg";
 import mask2 from "../../public/Mask2.svg";
 import {useRouter} from 'next/navigation';
 import Image from "next/image";
-import {SetStateAction, useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {questions} from "@/constants/questions";
 
 export default function Home() {
@@ -19,20 +19,6 @@ export default function Home() {
         // @ts-ignore
         setExpandedIndex(index === expandedIndex ? null : index);
     };
-
-    const items = [
-        "Is there an AI that writes essays?",
-        "Can I use ChatGPT to write my essay?",
-        "Can you use AI to write college essays?",
-        "How do schools know if you use ChatGPT?",
-        "Can you use ChatGPT to write essays without plagiarizing?",
-        "Can universities detect ChatGPT?",
-        "Can professors tell if AI wrote an essay?",
-        "How do I know if my essay was written by AI?",
-        "Why is my writing being detected as AI?",
-        "Is it OK to use ChatGPT for paraphrasing?",
-        "How do you not get detected as AI writing?",
-    ];
 
 
     const handleScroll = () => {
@@ -638,7 +624,7 @@ export default function Home() {
                             find answers to all the questions you have in mind.
                         </p>
                     </div>
-                    <div className="absolute flex mt-[670px] ml-[577px] max-[450px]:hidden">
+                    <div className="absolute flex mt-[670px] ml-[577px] max-[450px]:hidden -z-10">
                         <Icons.Spiral/>
                     </div>
                     <div
@@ -668,31 +654,6 @@ export default function Home() {
                                 ))}
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="flex bottom-0 w-full h-[134px] items-center justify-center bg-black z-10">
-            <div className="flex items-center justify-center w-[1440px] h-[134px] bg-black">
-                <div className="w-[1240px] flex flex-row justify-between max-[450px]:justify-center items-center">
-                    <div className="flex flex-row gap-[50px] max-[450px]:hidden">
-                        <p className="font-geist font-medium text-base text-white/70">
-                            ABOUT US
-                        </p>
-                        <p className="font-geist font-medium text-base text-white/70">
-                            PAPYON APPS
-                        </p>
-                        <p className="font-geist font-medium text-base text-white/70">
-                            PAPYON BLOG
-                        </p>
-                        <p className="font-geist font-medium text-base text-white/70">
-                            CONTACT US
-                        </p>
-                    </div>
-                    <div>
-                        <p className="font-geist font-medium text-xl text-white/70">
-                            Made with ❤️ in Izmir, Turkey 🇹🇷{" "}
-                        </p>
                     </div>
                 </div>
             </div>

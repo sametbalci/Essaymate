@@ -30,3 +30,4 @@ export {default as React} from './React';
 export {default as Spiral} from './Spiral';
 export {default as Teacher} from './Teacher';
 export {default as MonitorMobile} from './MonitorMobile';
+export {default as Line} from './Line';

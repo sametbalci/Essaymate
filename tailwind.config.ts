@@ -18,6 +18,7 @@ const config: Config = {
         geist: ['var(--font-geist-sans)'],
         geistMono: ['var(--font-geist-mono)'],
         'satoshi': "'Satoshi', sans-serif",
+        'nanum': "'Nanum Myeongjo', serif",
       },
     },
   },
