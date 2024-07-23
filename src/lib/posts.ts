@@ -15,7 +15,7 @@ const convertMarkdownToHtml = async (markdown: string) => {
 
 const createExcerpt = (htmlContent: string) => {
   const textContent = htmlContent.replace(/<\/?[^>]+>/gi, ''); // Strip HTML tags
-  return textContent.split(' ').slice(0, 14).join(' ') + '...';
+  return textContent.split(' ').slice(0, 8).join(' ') + '...';
 };
 
 const createExcerptForLatest = (htmlContent: string) => {
