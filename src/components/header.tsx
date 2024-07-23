@@ -98,7 +98,7 @@ const Header = () => {
                 href="/"
                 className={`flex md:items-center md:justify-center md:w-[84px] md:h-10 md:rounded-[50px] transition-all duration-200 ${
                   path === "/"
-                    ? "md:bg-[#1B48BB] bg-[#1B48BB] text-white"
+                    ? "bg-[#1B48BB] text-white"
                     : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none"
                 } py-2 px-3 rounded md:bg-transparent`}
               >
@@ -110,7 +110,7 @@ const Header = () => {
                 href="/blog"
                 className={`flex md:items-center md:justify-center md:w-[75px] md:h-10 md:rounded-[50px] ${
                   path.startsWith("/blog")
-                    ? "md:bg-[#1B48BB] bg-[#1B48BB] text-white"
+                    ? "bg-[#1B48BB] text-white"
                     : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none text-gray-900 rounded hover:bg-gray-100 transition-all duration-200"
                 } py-2 px-3 rounded md:bg-transparent`}
               >
@@ -122,7 +122,7 @@ const Header = () => {
                 href="/contact"
                 className={`flex md:items-center md:justify-center md:w-[125px] md:h-10 md:rounded-[50px] ${
                   path === "/contact"
-                    ? "md:bg-[#1B48BB] bg-[#1B48BB] text-white"
+                    ? "bg-[#1B48BB] text-white"
                     : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none text-gray-900 rounded hover:bg-gray-100 transition-all duration-200"
                 } py-2 px-3 rounded md:bg-transparent`}
               >
