@@ -54,7 +54,7 @@ const Header = () => {
     //   </div>
     // </div>
 
-    <nav className="md:flex md:fixed justify-center items-center w-full bg-gradient-to-b from-white to-white/0 md:h-20 z-20">
+    <nav className="md:flex md:fixed justify-center items-center w-full bg-gradient-to-b from-white to-white/0 md:h-20 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:gap-[781px]">
         <Link href={"/"}>
           <p className="text-black text-2xl font-extrabold font-geist">
@@ -96,12 +96,11 @@ const Header = () => {
             <li>
               <Link href="/">
                 <p
-                  className={`flex md:items-center md:justify-center md:w-[84px] md:h-10 md:rounded-[50px] ${
+                  className={`flex md:items-center md:justify-center md:w-[84px] md:h-10 md:rounded-[50px] transition-all duration-200 ${
                     path === "/"
-                      ? "md:bg-[#1B48BB] text-white bg-blue-700"
-                      : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none transition-all duration-200"
+                      ? "md:bg-[#1B48BB] bg-[#1B48BB] text-white"
+                      : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none"
                   } py-2 px-3 rounded md:bg-transparent`}
-                  aria-current="page"
                 >
                   Home
                 </p>
@@ -112,24 +111,22 @@ const Header = () => {
                 <p
                   className={`flex md:items-center md:justify-center md:w-[75px] md:h-10 md:rounded-[50px] ${
                     path.startsWith("/blog")
-                      ? "md:bg-[#1B48BB] text-white bg-blue-700"
+                      ? "md:bg-[#1B48BB] bg-[#1B48BB] text-white"
                       : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none text-gray-900 rounded hover:bg-gray-100 transition-all duration-200"
                   } py-2 px-3 rounded md:bg-transparent`}
-                  aria-current="page"
                 >
                   Blog
                 </p>
               </Link>
             </li>
             <li>
-            <Link href="/contact">
+              <Link href="/contact">
                 <p
                   className={`flex md:items-center md:justify-center md:w-[125px] md:h-10 md:rounded-[50px] ${
                     path === "/contact"
-                      ? "md:bg-[#1B48BB] text-white bg-blue-700"
+                      ? "md:bg-[#1B48BB] bg-[#1B48BB] text-white"
                       : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none text-gray-900 rounded hover:bg-gray-100 transition-all duration-200"
                   } py-2 px-3 rounded md:bg-transparent`}
-                  aria-current="page"
                 >
                   Contact Us
                 </p>

@@ -56,8 +56,8 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen items-center justify-center bg-[url('../../public/Dot.svg')] overflow-hidden">
-      <div className="flex flex-col gap-[21px] justify-center items-center max-[450px]:w-full max-[450px]:max-w-[450px] max-w-[1440px] min-h-screen p-24 mb-10 -mt-20">
-        <div className="flex flex-row items-center max-[450px]:justify-center justify-between w-full h-[960px] max-[450px]:w-[390px] bg-[url('../../public/Gradient_Blur.svg')] bg-repeat-round">
+      <div className="flex flex-col gap-[21px] justify-center items-center max-[450px]:w-full max-[450px]:max-w-[450px] max-w-[1440px] min-h-screen p-24 mb-10 -mt-20 max-[450px]:-mt-40">
+        <div className="flex flex-row items-center max-[450px]:justify-center justify-between w-full h-[960px] max-[450px]:w-[390px] bg-[url('../../public/Gradient_Blur.svg')] bg-repeat-round z-40">
           <Image src={gradientBlur} alt="" className="w-full absolute" />
           <div className="flex flex-col w-[628px] h-[598px] max-[450px]:w-[360px] max-[450px]:items-center max-[450px]:justify-center gap-2.5 -z-10">
             <p className="font-geist font-semibold text-[#0A84FF] text-[16px] max-[450px]:items-center max-[450px]:justify-center">
@@ -91,9 +91,9 @@ export default function Home() {
                 4.6 Stars (78.9k Ratings)
               </p>
             </div>
-            <div className="flex flex-row gap-8 mt-5 max-[450px]:hidden">
+            <div className="flex flex-row gap-8 md:mt-5 max-[450px]:fixed max-[450px]:items-center max-[450px]:justify-center max-[450px]:bottom-0 max-[450px]:h-20 max-[450px]:w-full max-[450px]:bg-white" style={{zIndex: 99999}}>
               <div
-                className="flex flex-row items-center justify-center gap-2.5 w-[189px] h-[60px] rounded-2xl bg-black border-solid border-4 border-black/[.1] cursor-pointer"
+                className="flex flex-row items-center justify-center gap-2.5 w-[189px] h-[60px] rounded-2xl bg-black border-solid border-4 border-black/[.1] cursor-pointer z-40"
                 onClick={() =>
                   router.push(
                     "https://apps.apple.com/tr/app/essaymate-ai-essay-writer-hw/id6446486799?l=tr"
@@ -111,7 +111,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="flex flex-row items-center justify-center gap-2.5 w-[209px] h-[60px] rounded-2xl bg-black border-solid border-4 border-black/[.1] cursor-pointer"
+                className="flex flex-row items-center justify-center gap-2.5 w-[209px] h-[60px] rounded-2xl bg-black border-solid border-4 border-black/[.1] cursor-pointer z-40"
                 onClick={() =>
                   router.push(
                     "https://play.google.com/store/apps/details?id=com.ppyn.nexaai"
