@@ -93,15 +93,14 @@ const Header = () => {
           <ul
             className={`font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:gap-5 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent`}
           >
-            <li>
-              <Link
-                href="/"
-                className={`flex md:items-center md:justify-center md:w-[84px] md:h-10 md:rounded-[50px] transition-all duration-200 ${
-                  path === "/"
-                    ? "bg-[#1B48BB] text-white"
-                    : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none"
-                } py-2 px-3 rounded md:bg-transparent`}
-              >
+            <li
+              className={`flex md:items-center md:justify-center md:w-[84px] md:h-10 md:rounded-[50px] transition-all duration-200 ${
+                path === "/"
+                  ? "bg-[#1B48BB] text-white"
+                  : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none"
+              } py-2 px-3 rounded`}
+            >
+              <Link href="/">
                 <p>Home</p>
               </Link>
             </li>
@@ -112,7 +111,7 @@ const Header = () => {
                   path.startsWith("/blog")
                     ? "bg-[#1B48BB] text-white"
                     : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none text-gray-900 rounded hover:bg-gray-100 transition-all duration-200"
-                } py-2 px-3 rounded md:bg-transparent`}
+                } py-2 px-3 rounded`}
               >
                 <p>Blog</p>
               </Link>
@@ -124,7 +123,7 @@ const Header = () => {
                   path === "/contact"
                     ? "bg-[#1B48BB] text-white"
                     : "md:border md:border-black/20 md:text-[#1B48BB] md:hover:bg-[#1B48BB] md:hover:text-white md:hover:border-none text-gray-900 rounded hover:bg-gray-100 transition-all duration-200"
-                } py-2 px-3 rounded md:bg-transparent`}
+                } py-2 px-3 rounded`}
               >
                 <p>Contact Us</p>
               </Link>
